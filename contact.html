@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontak - EduLearn</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1d70b8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #155a96;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            display: block;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1d70b8;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #1d70b8;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #155a96;
+        }
+
+        footer {
+            background-color: #1d70b8;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kontak EduLearn</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="contact.html" class="active">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Form Pendaftaran</h2>
+        <form onsubmit="submitForm(event)">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="minat">Minat Belajar:</label>
+            <select id="minat" name="minat" required>
+                <option value="">-- Pilih Minat --</option>
+                <option value="Matematika">Matematika</option>
+                <option value="Bahasa Inggris">Bahasa Inggris</option>
+                <option value="Pemrograman">Pemrograman</option>
+                <option value="Ilmu Sosial">Ilmu Sosial</option>
+            </select>
+
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EduLearn. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Mencegah reload
+            alert("Pesan anda terkirim. Terima kasih telah mendaftar!");
+        }
+    </script>
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // Mencegah reload
+
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        const minat = document.getElementById('minat').value;
+
+        if (nama && email && minat) {
+            alert(`✅ Pendaftaran Berhasil!\n\nNama: ${nama}\nEmail: ${email}\nMinat: ${minat}\n\nTerima kasih telah mendaftar!`);
+            // Reset form setelah submit
+            document.querySelector("form").reset();
+        } else {
+            alert("Mohon lengkapi semua field sebelum mendaftar.");
+        }
+    }
+</script>
+
+</body>
+</html>

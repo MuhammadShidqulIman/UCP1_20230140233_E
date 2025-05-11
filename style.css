@@ -1,0 +1,89 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #3b74b3;
+    color: white;
+    padding: 30px 20px 10px;
+    text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* Navbar */
+nav {
+    background-color: #295f9d;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    transition: border-bottom 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Main content */
+main {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #1d70b8;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Footer (opsional jika ingin ditambah) */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+}

@@ -1,0 +1,83 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Belajar Online Menyenangkan</title>
+    <link rel="stylesheet" href="style.css">
+    <a href="about.html">About</a>
+    <a href="contact.html">Kontak</a>
+    <a href="features.html">Fitur</a>
+
+</head>
+<body onload="showPromo()">
+    <header>
+        <h1>EduLearn</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <img src="belajar.png" alt="Aplikasi Belajar">
+        <h2>Belajar Jadi Lebih Seru dan Efektif!</h2>
+        <p>Platform pembelajaran interaktif untuk semua kalangan.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 EduLearn</p>
+    </footer>
+    <script>
+        function showPromo() {
+            alert("🎉 Diskon 50% untuk 100 pendaftar pertama! Daftar sekarang!");
+        }
+    </script>
+    <!-- Popup Promo -->
+<div id="popup-promo" style="
+display: none;
+position: fixed;
+top: 20%;
+left: 50%;
+transform: translateX(-50%);
+background-color: #fff;
+border: 2px solid #1d70b8;
+border-radius: 10px;
+padding: 20px;
+width: 300px;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+z-index: 1000;
+text-align: center;
+">
+<h3 style="color: #1d70b8;">🎉 Promo Spesial!</h3>
+<p>Dapatkan diskon 50% untuk pendaftaran minggu ini!</p>
+<button onclick="tutupPopup()" style="
+    margin-top: 10px;
+    background-color: #1d70b8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+">Tutup</button>
+</div>
+
+<script>
+// Tampilkan popup 3 detik setelah halaman dimuat
+window.onload = function() {
+    setTimeout(function() {
+        document.getElementById("popup-promo").style.display = "block";
+    }, 3000);
+};
+
+// Fungsi untuk menutup popup
+function tutupPopup() {
+    document.getElementById("popup-promo").style.display = "none";
+}
+</script>
+
+</body>
+</html>
